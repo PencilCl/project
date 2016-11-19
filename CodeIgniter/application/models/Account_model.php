@@ -8,7 +8,7 @@ class Account_model extends CI_Model {
 		$this->load->helper('url');
 	}
 
-	public function login() {
+	public function check() {
 		$redirect_url = $_SESSION['redirect_url'];
 
 		$username = $this->input->post('username');
@@ -56,6 +56,5 @@ class Account_model extends CI_Model {
 			}
 			$_SESSION['redirect_url'] = $redirect_url;
 			header("Location:".site_url('account/'));
-		}
 	}
 }
