@@ -1,6 +1,6 @@
 var productEditor;
 
-var control = ["home", "products"];
+var control = ["home", "products", "product"];
 
 window.onload = function() {
 	$("#menu-control").click(function() {
