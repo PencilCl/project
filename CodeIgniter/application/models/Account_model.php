@@ -54,7 +54,9 @@ class Account_model extends CI_Model {
 			if ($redirect_url === False) {
 				$redirect_url = current_url();
 			}
-			$_SESSION['redirect_url'] = $redirect_url;
-			header("Location:".site_url('account/'));
+			if (isset($_SESSION['user'])) {
+				unset($_SESSION['user']);
+			}
+			header("Location:".$redirect_url);
 	}
 }

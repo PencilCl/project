@@ -23,6 +23,6 @@ class Account extends CI_Controller {
 	}
 
 	public function logout() {
-		$this->load->logout('/');
+		$this->account->logout('/');
 	}
 }
