@@ -9,7 +9,7 @@ class Account_model extends CI_Model {
 	}
 
 	public function check() {
-		$redirect_url = $_SESSION['redirect_url'];
+		$redirect_url = isset($_SESSION['redirect_url'])?$_SESSION['redirect_url']:'/';
 
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');

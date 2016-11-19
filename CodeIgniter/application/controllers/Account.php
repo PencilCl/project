@@ -18,6 +18,10 @@ class Account extends CI_Controller {
 		$this->load->view('account');
 	}
 
+	public function check() {
+		$this->account->check();
+	}
+
 	public function logout() {
 		$this->load->logout('/');
 	}

@@ -19,16 +19,22 @@
 <body>
 <div class="container ">  
         <div class="form row">  
-            <form class="form-horizontal col-sm-offset-3 col-md-offset-3" id="login_form">  
+            <form class="form-horizontal col-sm-offset-3 col-md-offset-3" id="login_form" action="/index.php/account/check" method="post">
                 <h3 class="form-title">欢迎登陆商城</h3>  
+                <h5 class="error-hint" style="color: red;">
+                <?php if (isset($_SESSION['error'])) {
+                  echo $_SESSION['error'];
+                  unset($_SESSION['error']);
+                } ?>
+                </h5>
                 <div class="col-sm-9 col-md-9">  
                     <div class="form-group">  
                         <i class="fa fa-user fa-lg"></i>  
-                        <input class="form-control required" type="text" placeholder="Username" name="username" autofocus="autofocus" maxlength="20"/>  
+                        <input class="form-control required" type="text" placeholder="Username" name="username" autofocus="autofocus" maxlength="20" required="required" />  
                     </div>  
                     <div class="form-group">  
                             <i class="fa fa-lock fa-lg"></i> 
-                            <input class="form-control required" type="password" placeholder="Password" name="password" maxlength="8"/>  
+                            <input class="form-control required" type="password" placeholder="Password" name="password" maxlength="8" required="required"/>  
                     </div>  
                     <div class="form-group">  
                         <label class="checkbox">  
@@ -37,7 +43,8 @@
                     </div> 
                     <div class="btn-group btn-group-justified" role="group" aria-label="...">
                     <div class="btn-group"role="group"> 
-                        <button type="button" class="btn btn-default btn-success">登录</button> 
+                        <button type="button" class="btn btn-default btn-success" id="submit">登录</button>
+                        <input type="submit" id="real_submit" value="submit" style="display: none;">
                     </div> 
                 	</div>	
                 </div>  
@@ -49,4 +56,5 @@
 <script src="/js/jquery.min.js"></script>
 <!-- 包括所有已编译的插件 -->
 <script src="/js/bootstrap.min.js"></script>
+<script src="/js/account.js"></script>
 </html>
