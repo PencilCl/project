@@ -5,20 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>订单确认</title>
 	<!-- 引入 Bootstrap -->
-	<link href="css/tether.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="/css/tether.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
 	<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
 	<!--[if lt IE 9]>
 	 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
-	<link href="../css/font-awesome.css" rel="stylesheet">
-	<link href="../css/demo.css" rel="stylesheet" type="text/css" />
-	<link href="../css/cartstyle.css" rel="stylesheet" type="text/css" />
-	<link href="../css/jsstyle.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="../css/order.cs">
-	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<link href="/css/demo.css" rel="stylesheet" type="text/css" />
+	<link href="/css/cartstyle.css" rel="stylesheet" type="text/css" />
+	<link href="/css/jsstyle.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/css/order.css" />
+	<link href="/fonts/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />	
 </head>
 <body>
 	<!--顶部导航条 -->
@@ -29,7 +28,6 @@
         	</div>
         </div>
     </div>
-
 		<!--地址 -->
 		<div class="paycont">
 			<div class="address">
@@ -46,7 +44,7 @@
 							<div class="user DefaultAddr">
 
 								<span class="buy-address-detail">   
-           <span class="buy-user">艾迪 </span>
+           <span class="buy-user"><?php echo $user->name ?> </span>
 								<span class="buy-phone">15871145629</span>
 								</span>
 							</div>
@@ -180,20 +178,20 @@
 
 					<tr class="item-list">
 						<div class="bundle  bundle-last">
-
 							<div class="bundle-main">
+								<?php foreach ($order as $single) { ?>
 								<ul class="item-content clearfix">
 									<div class="pay-phone">
 										<li class="td td-item">
 											<div class="item-pic">
 												<a href="#" class="J_MakePoint">
-													<img src="../images/ysl2.jpg" class="itempic J_ItemImg">
+													<img src="<?php echo $single['product']->img ?>" class="itempic J_ItemImg">
 												</a>
 											</div>
 											<div class="item-info">
 												<div class="item-basic-info">
 													<a href="#" class="item-title J_MakePoint" data-point="tbcart.8.11">
-													法国代购YSL圣罗兰迷魅纯漾唇膏/方管镜面口红52#17色号</a>
+													<?php echo $single['product']->name ?></a>
 												</div>
 											</div>
 										</li>
@@ -205,7 +203,7 @@
 										<li class="td td-price">
 											<div class="item-price price-promo-promo">
 												<div class="price-content">
-													<em class="J_Price price-now">39.00</em>
+													<em class="J_Price price-now" id="singlePrice"><?php echo $single['product']->price ?></em>
 												</div>
 											</div>
 										</li>
@@ -216,7 +214,7 @@
 												<span class="phone-title">购买数量</span>
 												<div class="sl" >
 													<input class="min am-btn" name="" type="button" value="-" onclick="add(this)"/>
-													<input class="text_box" id="addGoods" name="" type="text" value="1" style="width:30px;" />
+													<input readonly="true" class="text_box" id="addGoods<?php echo $single['product']->id ?>" data-pid=<?php echo $single['product']->id ?> data-oid=<?php echo $single['order']->id ?> name="" type="text" value=<?php echo $single['order']->amount ?> style="width:30px;" />
 													<input class="add am-btn" name="" type="button" value="+" onclick="add(this)"/>
 												</div>
 											</div>
@@ -224,7 +222,7 @@
 									</li>
 									<li class="td td-sum">
 										<div class="td-inner" >
-											<em class="J_ItemSum number" id="price1" tabindex="0">268</em>
+											<em class="J_ItemSum number" id="price1" tabindex="0"><?php echo $single['product']->price * $single['order']->amount ?></em>
 										</div>
 									</li>
 									<li class="td td-oplist">
@@ -237,6 +235,7 @@
 									</li>
 
 								</ul>
+								<?php } ?>
 								<div class="clear"></div>
 
 							</div>
@@ -261,7 +260,7 @@
 					<!--含运费小计 -->
 					<div class="buy-point-discharge ">
 						<p class="price g_price ">
-							合计（含运费） <span>¥</span><em class="pay-sum" id = "price2">278</em>
+							合计（含运费） <span>¥</span><em class="pay-sum" id = "price2"><?php echo $single['product']->price * $single['order']->amount + 10 ?></em>
 						</p>
 					</div>
 
@@ -272,7 +271,7 @@
 								<div tabindex="0" id="holyshit267" class="realPay"><em class="t">实付款：</em>
 									<span class="price g_price">
                             			<span>¥</span> 
-                                     	<em class="style-large-bold-red" id="price3">278</em>
+                                     	<em class="style-large-bold-red" id="price3"><?php echo $single['product']->price * $single['order']->amount +10 ?></em>
 									</span>
 								</div>
 
@@ -291,7 +290,7 @@
 									<p class="buy-footer-address">
 										<span class="buy-line-title">收货人：</span>
 										<span class="buy-address-detail">   
-                                 <span class="buy-user">欧拉</span>
+                                 <span class="buy-user"><?php echo $user->name ?></span>
 										<span class="buy-phone">12345678910</span>
 										</span>
 									</p>
@@ -300,7 +299,7 @@
 
 							<div id="holyshit269" class="submitOrder">
 								<div class="go-btn-wrap">
-									<a id="J_Go" href="success.html" class="btn-go" tabindex="0" title="点击此按钮，提交订单">提交订单</a>
+									<a id="J_Go" href="/index.php/order/success" class="btn-go" tabindex="0" title="点击此按钮，提交订单">提交订单</a>
 								</div>
 							</div>
 							<div class="clear"></div>
@@ -313,9 +312,9 @@
 	<div class="clear"></div>
 </body>
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
-<script src="../js/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
 <!-- 包括所有已编译的插件 -->
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/address.js"></script>
-<script src="../js/addGoods.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/address.js"></script>
+<script src="/js/addGoods.js"></script>
 </html>

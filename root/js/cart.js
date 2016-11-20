@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     /*
      * 计算购物车中每一个产品行的金额小计
      *
@@ -81,21 +80,47 @@ $(document).ready(function() {
             if (isNaN(val) || (val < 1)) { val = 1; }
 
             if ($(window.event.srcElement).hasClass("minus")) {
-                if (val > 1) val--;
-                input.val(val);
-                getSubTotal(this);
+                $sid = $(input).data('sid');
+                $.ajax({
+                  type: "POST",
+                  dataType: "html",
+                  url: '/index.php/shopping/minusAmount',
+                  data: 'sid=' + $sid,
+                  success: function (data) {
+                    sn = parseInt(data);
+                    if (isNaN(sn)) {
+                        alert("修改数量失败！" + data);
+                    } else {
+                        $(input).val(val - 1);
+                        getTotal();
+                    }
+                  },
+                  error: function(data) {
+                      alert("修改数量失败~" + data.responseText);
+                  }
+                });
             }
             else if ($(window.event.srcElement).hasClass("plus")) {
-                if (val < 9999) val++;
-                input.val(val);
-                getSubTotal(this);
+                $sid = $(input).data('sid');
+                $.ajax({
+                  type: "POST",
+                  dataType: "html",
+                  url: '/index.php/shopping/addAmount',
+                  data: 'sid=' + $sid,
+                  success: function (data) {
+                    sn = parseInt(data);
+                    if (isNaN(sn)) {
+                        alert("修改数量失败！" + data);
+                    } else {
+                        $(input).val(val + 1);
+                        getTotal();
+                    }
+                  },
+                  error: function(data) {
+                      alert("修改数量失败~" + data.responseText);
+                  }
+                });
             }
-            else if ($(window.event.srcElement).hasClass("delete")) {
-                if (confirm("确定要从购物车中删除此产品？")) {
-                    $(this).remove();
-                }
-            }
-            getTotal();
         });
     });
 });

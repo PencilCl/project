@@ -5,17 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>交易成功</title>
 	<!-- 引入 Bootstrap -->
-	<link href="css/tether.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="/css/tether.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
 	<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
 	<!--[if lt IE 9]>
 	 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
-	<link href="css/font-awesome.css" rel="stylesheet">
-	<link href="css/demo.css" rel="stylesheet" type="text/css" />
-	<link href="css/sustyle.css" rel="stylesheet" type="text/css" />
+	<link href="/css/font-awesome.css" rel="stylesheet">
+	<link href="/css/demo.css" rel="stylesheet" type="text/css" />
+	<link href="/css/sustyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <!--顶部导航条 -->
@@ -39,8 +39,8 @@
      </ul>
      <div class="option">
        <span class="info">您可以</span>
-        <a href="../person/order.html" class="J_MakePoint">查看<span>已买到的宝贝</span></a>
-        <a href="../person/orderinfo.html" class="J_MakePoint"><span>交易详情</span></a>
+        <a href="/person/order.html" class="J_MakePoint">查看<span>已买到的宝贝</span></a>
+        <a href="/person/orderinfo.html" class="J_MakePoint"><span>交易详情</span></a>
      </div>
     </div>
   </div>

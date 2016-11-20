@@ -14,7 +14,10 @@ class Shopping extends CI_Controller {
 	public function index() {
 		$this->account->login();
 
-		$this->load->view('shopping');
+		$data['user'] = $_SESSION['user'];
+		$data['shopNum'] = $this->shopping->getShoppingNum();
+		$data['shoppings'] = $this->shopping->getShopping($_SESSION['user']->id);
+		$this->load->view('shopping', $data);
 	}
 
 	public function addToShopping() {
@@ -25,6 +28,24 @@ class Shopping extends CI_Controller {
 			return ;
 		}
 		header("Location:".siteurl('shopping'));
+	}
+
+	public function deleteFromShopping() {
+		$this->account->login();
+
+		echo $this->shopping->deleteShopping($this->input->post('sid'));
+	}
+
+	public function addAmount() {
+		$this->account->login();
+
+		echo $this->shopping->addAmount();
+	}
+
+	public function minusAmount() {
+		$this->account->login();
+		
+		echo $this->shopping->minusAmount();
 	}
 
 }
