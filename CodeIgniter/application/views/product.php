@@ -72,7 +72,7 @@
                     <div class="row">
 
                         <div class="col-sm-12 col-md-6 col-lg-6" style="overflow: hidden;">
-                            <img class="img-rounded" src="<?php echo $product->img ?>"/>
+                            <img class="img-rounded" style="width: 400px; height: 450px;" src="<?php echo $product->img ?>"/>
                         </div>
 
                         <div class="col-sm-12 col-md-6 col-lg-6">
