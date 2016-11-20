@@ -3,15 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>home</title>
-	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="../css/home.css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<script src='/js/jquery.min.js'></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
 	<div class="header">
 		<div class="header_nav">
-			<li><a href="#" class="login">亲，请登录，免费注册</a></li>
+			<li>
+			<?php if (isset($user)) {?>
+			    <img src="<?php echo $user->avatar ?>" class="img-circle" width=32 height=32 alt="avatar">
+			    <?php echo $user->name ?>
+			<?php } else { ?>
+			    <a href="#" class="login">亲，请登录，免费注册 </a>
+			<?php } ?></li>
 			<div class="space"></div>
 			<li><a href="#">商城首页</a></li>
 			<li><a href="#">购物车</a></li>
@@ -30,13 +36,13 @@
     <!-- 轮播（Carousel）项目 -->
     <div class="carousel-inner">
         <div class="item active">
-           <a href="#"> <img src="../images/ad1.jpg" alt="First slide"></a>
+           <a href="#"> <img src="/images/ad1.jpg" alt="First slide"></a>
         </div>
         <div class="item">
-        <a href="#"> <img src="../images/ad2.jpg" alt="Second slide"></a>
+        <a href="#"> <img src="/images/ad2.jpg" alt="Second slide"></a>
         </div>
         <div class="item">
-        <a href="#"> <img src="../images/ad3.jpg" alt="Third slide"></a>
+        <a href="#"> <img src="/images/ad3.jpg" alt="Third slide"></a>
         </div>
     </div>
     <!-- 轮播（Carousel）导航 -->
@@ -49,38 +55,38 @@
 	</div>
 	<div class="shortcut">
 		<div class="shortcut1">
-			<a href="#"><img src="../images/566.png" alt=""></a>
+			<a href="#"><img src="/images/566.png" alt=""></a>
 		</div>
 		<div class="shortcut2">
-				<a href="#"><img src="../images/tw2.jpg" alt=""></a>
+				<a href="#"><img src="/images/tw2.jpg" alt=""></a>
 		</div>
 		<div class="shortcut3">
-				<a href="#"><img src="../images/02.jpg" alt=""></a>
+				<a href="#"><img src="/images/02.jpg" alt=""></a>
 		</div>
 		<div class="shortcut4">
-				<a href="#"><img src="../images/activity2.jpg" alt=""></a>
+				<a href="#"><img src="/images/activity2.jpg" alt=""></a>
 		</div>
 		<div class="shortcut5">
-				<a href="#"><img src="../images/list1.jpg" alt=""></a>
+				<a href="#"><img src="/images/list1.jpg" alt=""></a>
 		</div>
 	</div>
 
 	<div class="product_list">
 		<h1>新品速递</h1>
 		<div class="tcard">
-			<a href="#"><img src="../images/listsmall1.jpg" alt=""></a>
+			<a href="#"><img src="/images/listsmall1.jpg" alt=""></a>
 			<h2>三只松鼠-腰果</h2>
 			<h3><a href="#" class="span"> 新品</a>   月销2320笔</h3>
 			<p>"人好物也好，以后还来你家买!"</p>
 		</div>
 		<div class="tcard">
-			<a href="#"><img src="../images/3.jpg" alt=""></a>
+			<a href="#"><img src="/images/3.jpg" alt=""></a>
 			<h2>蛋糕</h2>
 			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
 			<p>"人好物也好，以后还来你家买!"</p>
 		</div>
 		<div class="tcard">
-			<a href="#"><img src="../images/303082209045706516.jpg" alt=""></a>
+			<a href="#"><img src="/images/303082209045706516.jpg" alt=""></a>
 			<h2>三只松鼠-松果</h2>
 			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
 			<p>"人好物也好，以后还来你家买!"</p>
@@ -90,19 +96,19 @@
 	<div class="product_list">
 		<h1>新品速递</h1>
 		<div class="tcard">
-			<a href="#"><img src="../images/listsmall1.jpg" alt=""></a>
+			<a href="#"><img src="/images/listsmall1.jpg" alt=""></a>
 			<h2>三只松鼠-腰果</h2>
 			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
 			<p>"人好物也好，以后还来你家买!"</p>
 		</div>
 		<div class="tcard">
-			<a href="#"><img src="../images/3.jpg" alt=""></a>
+			<a href="#"><img src="/images/3.jpg" alt=""></a>
 			<h2>蛋糕</h2>
 			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
 			<p>"人好物也好，以后还来你家买!"</p>
 		</div>
 		<div class="tcard">
-			<a href="#"><img src="../images/303082209045706516.jpg" alt=""></a>
+			<a href="#"><img src="/images/303082209045706516.jpg" alt=""></a>
 			<h2>三只松鼠-松果</h2>
 			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
 			<p>"人好物也好，以后还来你家买!"</p>
