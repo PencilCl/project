@@ -13,12 +13,12 @@
 	 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
-	<link href="css/font-awesome.css" rel="stylesheet">
-	<link href="css/demo.css" rel="stylesheet" type="text/css" />
-	<link href="css/cartstyle.css" rel="stylesheet" type="text/css" />
-	<link href="css/jsstyle.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/order.cs">
-	<link href="/fonts/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../css/font-awesome.css" rel="stylesheet">
+	<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+	<link href="../css/cartstyle.css" rel="stylesheet" type="text/css" />
+	<link href="../css/jsstyle.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="../css/order.cs">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 	<!--顶部导航条 -->
@@ -144,9 +144,9 @@
 			<div class="logistics">
 				<h3>选择支付方式</h3>
 				<ul class="pay-list">
-					<li class="pay card"><img src="images/wangyin.jpg" />银联<span></span></li>
-					<li class="pay qq"><img src="images/weizhifu.jpg" />微信<span></span></li>
-					<li class="pay taobao"><img src="images/zhifubao.jpg" />支付宝<span></span></li>
+					<li class="pay card"><img src="../images/wangyin.jpg" />银联<span></span></li>
+					<li class="pay qq"><img src="../images/weizhifu.jpg" />微信<span></span></li>
+					<li class="pay taobao"><img src="../images/zhifubao.jpg" />支付宝<span></span></li>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -187,7 +187,7 @@
 										<li class="td td-item">
 											<div class="item-pic">
 												<a href="#" class="J_MakePoint">
-													<img src="images/ysl2.jpg" class="itempic J_ItemImg">
+													<img src="../images/ysl2.jpg" class="itempic J_ItemImg">
 												</a>
 											</div>
 											<div class="item-info">
