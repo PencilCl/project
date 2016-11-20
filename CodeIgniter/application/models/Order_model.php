@@ -76,6 +76,8 @@ class Order_model extends CI_Model {
 	public function addAmount() {
 		$oid = $this->input->post('oid');
 		$pid = $this->input->post('pid');
+		echo $oid;
+		echo $pid;
 		$orderlists = $this->db->select('*')->where('order', $oid)->get('ordermap')->result();
 		$find = false;
 		foreach ($orderlists as $orderlist) {
@@ -107,6 +109,8 @@ class Order_model extends CI_Model {
 	public function minusAmount() {
 		$oid = $this->input->post('oid');
 		$pid = $this->input->post('pid');
+		echo $oid;
+		echo $pid;
 		$orderlists = $this->db->select('*')->where('order', $oid)->get('ordermap')->result();
 		$find = false;
 		foreach ($orderlists as $orderlist) {
