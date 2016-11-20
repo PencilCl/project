@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>交易成功</title>
 	<!-- 引入 Bootstrap -->
+	<link rel="stylesheet" href="../css/home.css">
 	<link href="css/tether.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
@@ -19,8 +20,15 @@
 </head>
 <body>
 <!--顶部导航条 -->
-<div>
-	
+<div class="header">
+	<div class="header_nav">
+		<li><a href="#" class="login">亲，请登录，免费注册</a></li>
+		<div class="space"></div>
+		<li><a href="#">商城首页</a></li>
+		<li><a href="#">购物车</a></li>
+		<li><a href="#">收藏夹</a></li>
+		<li><a href="#">个人中心</a></li>
+	</div>
 </div>
 
 <div class="take-delivery">

@@ -98,18 +98,18 @@ body{
 	margin-bottom: 50px;
 	margin-left: 97px;
 }
-.tcard{
+.card{
 	display: inline-block;
 	margin-left: 95px;
 	padding: 5px 5px;
 	width: 24%;
 	box-shadow: 0 1px 1px grey, 0 0 1px grey, 0 0 1px grey;  
 }
-.tcard img{
+.card img{
 	width: 290px;
 	height: 300px;
 }
-.tcard h2{
+.card h2{
 	font-weight: bold;
 }
 .span {
@@ -120,10 +120,10 @@ body{
 	text-decoration: none;
 	border-radius: 5px;
 }
-.tcard h3{
+.card h3{
 	color: grey;
 }
-.tcard p{
+.card p{
 	font-size: 20px;
 }
 .bottom{
