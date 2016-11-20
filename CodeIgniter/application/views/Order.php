@@ -7,6 +7,7 @@
 	<!-- 引入 Bootstrap -->
 	<link href="/css/tether.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/home.css">
 	<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
 	<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
 	<!--[if lt IE 9]>
@@ -20,12 +21,16 @@
 	<link href="/fonts/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />	
 </head>
 <body>
-	<!--顶部导航条 -->
-	 <div class="row ">
-        <div class="col-sm-12 col-md-5 col-md-offset-4">
-            <div class="header_nav navbar ">
-	          
-        	</div>
+<!--顶部导航条 -->
+<div class="row navbar-default navbar-fixed-top" role="navigation"">
+      <div class="col-sm-12 col-md-6 col-md-offset-3">
+        <div class="header_nav  ">
+            <li><a href=" " class="login">亲，请登录，免费注册 </a></li>
+            <div class="space"></div>
+            <li><a href="#">商城首页</a></li>
+            <li><i class="fa fa-shopping-cart"></i><a href="#"> 购物车</a></li>
+            <li><i class="fa fa-heart"></i><a href="#">  收藏夹</a></li>
+            <li><i class=" fa fa-user"></i><a href="#"> 个人中心</a></li>
         </div>
     </div>
 		<!--地址 -->
@@ -77,105 +82,51 @@
 				</ul>
 
 				<div class="clear"></div>
-			</div>
-			
-		<div class="theme-popover">
-			<!--标题 -->
-			<div class="am-cf am-padding">
-				<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">新增地址</strong> / <small>Add address</small></div>
-			</div>
-			<hr/>
-			<div class="am-u-md-12">
-				<form class="am-form am-form-horizontal">
+</div>
 
-					<div class="am-form-group">
-						<label for="user-name" class="am-form-label">收货人</label>
-						<div class="am-form-content">
-							<input type="text" id="user-name" placeholder="收货人">
-						</div>
-					</div>
+<!--标题 -->
+<div class="theme-popover">
+	<div class="am-cf am-padding">
+		<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">新增地址</strong> / <small>Add address</small></div>
+	</div>
+	<hr/>
+</div>
 
-					<div class="am-form-group">
-						<label for="user-phone" class="am-form-label">手机号码</label>
-						<div class="am-form-content">
-							<input id="user-phone" placeholder="手机号必填" type="email">
-						</div>
-					</div>
+<!--支付方式-->
+<div class="logistics">
+	<h3>选择支付方式</h3>
+	<ul class="pay-list">
+		<li class="pay card"><img src="../images/wangyin.jpg" />银联<span></span></li>
+		<li class="pay qq"><img src="../images/weizhifu.jpg" />微信<span></span></li>
+		<li class="pay taobao"><img src="../images/zhifubao.jpg" />支付宝<span></span></li>
+	</ul>
+</div>
+<div class="clear"></div>
 
-					<div class="am-form-group">
-						<label for="user-phone" class="am-form-label">所在地</label>
-						<div class="am-form-content address">
-							<select data-am-selected>
-								<option value="a">浙江省</option>
-								<option value="b">湖北省</option>
-							</select>
-							<select data-am-selected>
-								<option value="a">温州市</option>
-								<option value="b">武汉市</option>
-							</select>
-							<select data-am-selected>
-								<option value="a">瑞安区</option>
-								<option value="b">洪山区</option>
-							</select>
-						</div>
-					</div>
-
-					<div class="am-form-group">
-						<label for="user-intro" class="am-form-label">详细地址</label>
-						<div class="am-form-content">
-							<textarea class="" rows="3" id="user-intro" placeholder="输入详细地址"></textarea>
-							<small>100字以内写出你的详细地址...</small>
-						</div>
-					</div>
-
-					<div class="am-form-group theme-poptit">
-						<div class="am-u-sm-9 am-u-sm-push-3">
-							<div class="am-btn am-btn-danger">保存</div>
-							<div class="am-btn am-btn-danger close">取消</div>
-						</div>
-					</div>
-				</form>
+<!--订单 -->
+<div class="concent">
+	<div id="payTable">
+		<h3>确认订单信息</h3>
+		<div class="cart-table-th">
+			<div class="wp">
+				<div class="th th-item">
+					<div class="td-inner">商品信息</div>
+				</div>
+				<div class="th th-price">
+					<div class="td-inner">单价</div>
+				</div>
+				<div class="th th-amount">
+					<div class="td-inner">数量</div>
+				</div>
+				<div class="th th-sum">
+					<div class="td-inner">金额</div>
+				</div>
+				<div class="th th-oplist">
+					<div class="td-inner">配送方式</div>
+				</div>
 			</div>
 		</div>
-
-			<!--支付方式-->
-			<div class="logistics">
-				<h3>选择支付方式</h3>
-				<ul class="pay-list">
-					<li class="pay card"><img src="../images/wangyin.jpg" />银联<span></span></li>
-					<li class="pay qq"><img src="../images/weizhifu.jpg" />微信<span></span></li>
-					<li class="pay taobao"><img src="../images/zhifubao.jpg" />支付宝<span></span></li>
-				</ul>
-			</div>
-			<div class="clear"></div>
-
-			<!--订单 -->
-			<div class="concent">
-				<div id="payTable">
-					<h3>确认订单信息</h3>
-					<div class="cart-table-th">
-						<div class="wp">
-
-							<div class="th th-item">
-								<div class="td-inner">商品信息</div>
-							</div>
-							<div class="th th-price">
-								<div class="td-inner">单价</div>
-							</div>
-							<div class="th th-amount">
-								<div class="td-inner">数量</div>
-							</div>
-							<div class="th th-sum">
-								<div class="td-inner">金额</div>
-							</div>
-							<div class="th th-oplist">
-								<div class="td-inner">配送方式</div>
-							</div>
-
-						</div>
-					</div>
-					<div class="clear"></div>
-
+		<div class="clear"></div>
 					<tr class="item-list">
 						<div class="bundle  bundle-last">
 							<div class="bundle-main">
@@ -237,26 +188,6 @@
 								</ul>
 								<?php } ?>
 								<div class="clear"></div>
-
-							</div>
-					</tr>
-					<div class="clear"></div>
-					<div class="pay-total">
-				<!--留言-->
-					<div class="order-extra">
-						<div class="order-user-info">
-							<div id="holyshit257" class="memo">
-								<label>买家留言：</label>
-								<input type="text" title="选填,对本次交易的说明（建议填写已经和卖家达成一致的说明）" placeholder="选填,对本次交易的说明(建议填写和卖家达成一致的说明)" class="memo-input J_MakePoint c2c-text-default memo-close">
-								<div class="msg hidden J-msg">
-									<p class="error">最多输入500个字符</p>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<div class="clear"></div>
-					</div>
 					<!--含运费小计 -->
 					<div class="buy-point-discharge ">
 						<p class="price g_price ">
@@ -303,12 +234,11 @@
 								</div>
 							</div>
 							<div class="clear"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-	<div class="theme-popover-mask"></div>
-
+	</div>
+	</div>
+	</div>
+</div>
+<div class="theme-popover-mask"></div>
 	<div class="clear"></div>
 </body>
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->

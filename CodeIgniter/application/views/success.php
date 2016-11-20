@@ -7,22 +7,31 @@
 	<!-- 引入 Bootstrap -->
 	<link href="/css/tether.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/home.css">
 	<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
 	<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
 	<!--[if lt IE 9]>
 	 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
-	<link href="/css/font-awesome.css" rel="stylesheet">
+  <link href="/fonts/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" /> 
 	<link href="/css/demo.css" rel="stylesheet" type="text/css" />
 	<link href="/css/sustyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <!--顶部导航条 -->
-<div>
-	
+<div class="row navbar-default navbar-fixed-top" role="navigation"">
+      <div class="col-sm-12 col-md-6 col-md-offset-3">
+        <div class="header_nav  ">
+            <li><a href=" " class="login">亲，请登录，免费注册 </a></li>
+            <div class="space"></div>
+            <li><a href="#">商城首页</a></li>
+            <li><i class="fa fa-shopping-cart"></i><a href="#"> 购物车</a></li>
+            <li><i class="fa fa-heart"></i><a href="#">  收藏夹</a></li>
+            <li><i class=" fa fa-user"></i><a href="#"> 个人中心</a></li>
+        </div>
+    </div>
 </div>
-
 <div class="take-delivery">
  <div class="status">
    <h2>您已成功付款</h2>
