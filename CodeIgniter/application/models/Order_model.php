@@ -22,6 +22,17 @@ class Order_model extends CI_Model {
 		return $this->db->update('order', $data, $where);
 	}
 
+	public function getOrders($userId) {
+		$result = array();
+		$query = $this->db->select('id')
+									->where('user', $userId)
+									->get('order');
+		foreach ($query->result() as $orderid) {
+			$result[] = $orderid->id;
+		}
+		return $result;
+	}
+
 	public function getOrderProduct($orderId) {
 		$products = array();
 		$query = $this->db->select('orderlist')
