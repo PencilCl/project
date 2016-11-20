@@ -9,7 +9,7 @@ body{
 	width: 100%;
 	height: 100%;
 }
-.header{
+.head_er{
 	width: 100%;
 	height: 50px;
 	text-align: center;
@@ -18,10 +18,10 @@ body{
 	margin-bottom: 3px;
 	z-index: 9999;
 }
-.header a:hover{
+.head_er a:hover{
 	background-color: #E0E0E0;
 }
-.header a,.header a:hover{
+.head_er a,.head_er a:hover{
 	color: black;
 	display: inline-block;
 	padding: 0px 10px;
