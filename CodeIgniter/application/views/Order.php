@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>订单确认</title>
 	<!-- 引入 Bootstrap -->
+	<link rel="stylesheet" href="../css/home.css">
 	<link href="css/tether.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
@@ -13,23 +14,28 @@
 	 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
+
 	<link href="../css/font-awesome.css" rel="stylesheet">
 	<link href="../css/demo.css" rel="stylesheet" type="text/css" />
 	<link href="../css/cartstyle.css" rel="stylesheet" type="text/css" />
 	<link href="../css/jsstyle.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="../css/order.cs">
+	<link rel="stylesheet" href="../css/order.css">
 	<link href="../css/font-awesome.min.css" rel="stylesheet">
+
 </head>
 <body>
 <!--顶部导航条 -->
-<div class="row ">
-	<div class="col-sm-12 col-md-5 col-md-offset-4">
-		<div class="header_nav navbar ">
-
-		</div>
+<div class="header">
+	<div class="header_nav">
+		<li><a href="#" class="login">亲，请登录，免费注册</a></li>
+		<div class="space"></div>
+		<li><a href="#">商城首页</a></li>
+		<li><a href="#">购物车</a></li>
+		<li><a href="#">收藏夹</a></li>
+		<li><a href="#">个人中心</a></li>
 	</div>
 </div>
-
+<div class="clear"></div>
 <!--地址 -->
 <div class="paycont">
 <div class="address">
@@ -83,57 +89,6 @@
 		<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">新增地址</strong> / <small>Add address</small></div>
 	</div>
 	<hr/>
-	<div class="am-u-md-12">
-		<form class="am-form am-form-horizontal">
-
-			<div class="am-form-group">
-				<label for="user-name" class="am-form-label">收货人</label>
-				<div class="am-form-content">
-					<input type="text" id="user-name" placeholder="收货人">
-				</div>
-			</div>
-
-			<div class="am-form-group">
-				<label for="user-phone" class="am-form-label">手机号码</label>
-				<div class="am-form-content">
-					<input id="user-phone" placeholder="手机号必填" type="email">
-				</div>
-			</div>
-
-			<div class="am-form-group">
-				<label for="user-phone" class="am-form-label">所在地</label>
-				<div class="am-form-content address">
-					<select data-am-selected>
-						<option value="a">浙江省</option>
-						<option value="b">湖北省</option>
-					</select>
-					<select data-am-selected>
-						<option value="a">温州市</option>
-						<option value="b">武汉市</option>
-					</select>
-					<select data-am-selected>
-						<option value="a">瑞安区</option>
-						<option value="b">洪山区</option>
-					</select>
-				</div>
-			</div>
-
-			<div class="am-form-group">
-				<label for="user-intro" class="am-form-label">详细地址</label>
-				<div class="am-form-content">
-					<textarea class="" rows="3" id="user-intro" placeholder="输入详细地址"></textarea>
-					<small>100字以内写出你的详细地址...</small>
-				</div>
-			</div>
-
-			<div class="am-form-group theme-poptit">
-				<div class="am-u-sm-9 am-u-sm-push-3">
-					<div class="am-btn am-btn-danger">保存</div>
-					<div class="am-btn am-btn-danger close">取消</div>
-				</div>
-			</div>
-		</form>
-	</div>
 </div>
 
 <!--支付方式-->
