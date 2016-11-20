@@ -69,19 +69,19 @@
 
 	<div class="product_list">
 		<h1>新品速递</h1>
-		<div class="card">
+		<div class="tcard">
 			<a href="#"><img src="../images/listsmall1.jpg" alt=""></a>
 			<h2>三只松鼠-腰果</h2>
 			<h3><a href="#" class="span"> 新品</a>   月销2320笔</h3>
 			<p>"人好物也好，以后还来你家买!"</p>
 		</div>
-		<div class="card">
+		<div class="tcard">
 			<a href="#"><img src="../images/3.jpg" alt=""></a>
 			<h2>蛋糕</h2>
 			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
 			<p>"人好物也好，以后还来你家买!"</p>
 		</div>
-		<div class="card">
+		<div class="tcard">
 			<a href="#"><img src="../images/303082209045706516.jpg" alt=""></a>
 			<h2>三只松鼠-松果</h2>
 			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
@@ -91,19 +91,19 @@
 	
 	<div class="product_list">
 		<h1>新品速递</h1>
-		<div class="card">
+		<div class="tcard">
 			<a href="#"><img src="../images/listsmall1.jpg" alt=""></a>
 			<h2>三只松鼠-腰果</h2>
 			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
 			<p>"人好物也好，以后还来你家买!"</p>
 		</div>
-		<div class="card">
+		<div class="tcard">
 			<a href="#"><img src="../images/3.jpg" alt=""></a>
 			<h2>蛋糕</h2>
 			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
 			<p>"人好物也好，以后还来你家买!"</p>
 		</div>
-		<div class="card">
+		<div class="tcard">
 			<a href="#"><img src="../images/303082209045706516.jpg" alt=""></a>
 			<h2>三只松鼠-松果</h2>
 			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
