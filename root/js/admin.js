@@ -327,6 +327,10 @@ function publishProduct() {
 	$("#product").removeClass("hidden");
 	$("#func-name").html("Publish product");
 	$("#pid").val("");
+	$("#name").val("");
+	$("#img").val("");
+	$("#price").val("");
+	$("#stock").val("");
 	productEditor.$txt.html("");
 }
 /**

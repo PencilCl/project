@@ -76,7 +76,7 @@
         		<?php echo $user->name ?>
         	</li>
         	<div class="space"></div>
-        	<li><a href="#">商城首页</a></li>
+        	<li><a href="/">商城首页</a></li>
         	<li><i class="fa fa-shopping-cart"></i><a href="/index.php/shopping"> 购物车<sup><span class="badge" style="background-color: #b94a48" id="shopNum"><?php echo isset($shopNum)?$shopNum:'' ?></span></sup></a></li>
         	<li><i class="fa fa-heart"></i><a href="#">  收藏夹</a></li>
         	<li><i class=" fa fa-user"></i><a href="#"> 个人中心</a></li>

@@ -27,7 +27,7 @@ class Shopping extends CI_Controller {
 			echo $result;
 			return ;
 		}
-		header("Location:".siteurl('shopping'));
+		header("Location:".site_url('shopping'));
 	}
 
 	public function deleteFromShopping() {

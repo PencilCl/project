@@ -46,7 +46,7 @@
             <?php }?>
             </a></li>
             <div class="space"></div>
-            <li><a href="#">商城首页</a></li>
+            <li><a href="/">商城首页</a></li>
             <li><i class="fa fa-shopping-cart"></i><a href="/index.php/shopping"> 购物车<sup><span class="badge" style="background-color: #b94a48" id="shopNum"><?php echo isset($shopNum)?$shopNum:'' ?></span></sup></a></li>
             <li><i class="fa fa-heart"></i><a href="#">  收藏夹</a></li>
             <li><i class=" fa fa-user"></i><a href="#"> 个人中心</a></li>
@@ -177,12 +177,18 @@
                             </div>
                             <li>
                                 <div class="clearfix tb-btn tb-btn-buy theme-login">
-                                    <a id="LikBuy" title="点此按钮到下一步确认购买信息" href="#" data-pid=<?php echo $product->id ?>>立即购买</a>
+                                    <a id="LikBuy" title="点此按钮到下一步确认购买信息" href="" data-pid=<?php echo $product->id ?>>立即购买</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="clearfix tb-btn tb-btn-basket theme-login">
-                                    <a id="LikBasket" title="加入购物车" href="#"  data-pid=<?php echo $product->id ?> onclick="addToShopCar(this)">加入购物车</a>
+                                    <?php if (isset($user)) {?>
+                                        <a id="LikBasket" title="加入购物车" href="#" data-pid=<?php echo $product->id ?> onclick="addToShopCar(this)">加入购物车</a>
+                                        
+                                    <?php } else { ?>
+                                        <a id="LikBasket" title="加入购物车" href="<?php echo "/index.php/product/login/".$product->id ?>">加入购物车</a>
+                                    <?php }?>
+                                    
                                 </div>
                             </li>
                         </div>

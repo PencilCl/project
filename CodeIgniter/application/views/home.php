@@ -12,15 +12,17 @@
 	<div class="header">
 		<div class="header_nav">
 			<li>
-			<?php if (isset($user)) {?>
+			<?php if (isset($_SESSION['user'])) {
+				$user = $_SESSION['user'];?>
 			    <img src="<?php echo $user->avatar ?>" class="img-circle" width=32 height=32 alt="avatar">
 			    <?php echo $user->name ?>
+			    <a href="/index.php/home/logout">[退出]</a>
 			<?php } else { ?>
-			    <a href="#" class="login">亲，请登录，免费注册 </a>
+			    <a href="/index.php/home/login" class="login">亲，请登录，免费注册 </a>
 			<?php } ?></li>
 			<div class="space"></div>
-			<li><a href="#">商城首页</a></li>
-			<li><a href="#">购物车</a></li>
+			<li><a href="/">商城首页</a></li>
+			<li><a href="/index.php/shopping">购物车</a></li>
 			<li><a href="#">收藏夹</a></li>
 			<li><a href="#">个人中心</a></li>
 		</div>
@@ -73,46 +75,26 @@
 
 	<div class="product_list">
 		<h1>新品速递</h1>
-		<div class="tcard">
-			<a href="#"><img src="/images/listsmall1.jpg" alt=""></a>
-			<h2>三只松鼠-腰果</h2>
-			<h3><a href="#" class="span"> 新品</a>   月销2320笔</h3>
-			<p>"人好物也好，以后还来你家买!"</p>
-		</div>
-		<div class="tcard">
-			<a href="#"><img src="/images/3.jpg" alt=""></a>
-			<h2>蛋糕</h2>
-			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
-			<p>"人好物也好，以后还来你家买!"</p>
-		</div>
-		<div class="tcard">
-			<a href="#"><img src="/images/303082209045706516.jpg" alt=""></a>
-			<h2>三只松鼠-松果</h2>
-			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
-			<p>"人好物也好，以后还来你家买!"</p>
-		</div>
+		<?php foreach ($products as $product) { ?>
+			<div class="tcard">
+				<a href="/index.php/product/index/<?php echo $product->id ?>"><img src="<?php echo $product->img ?>" alt=""></a>
+				<h2><?php echo $product->name ?></h2>
+				<h3><a href="#" class="span"> 新品</a>   月销2320笔</h3>
+				<p>"人好物也好，以后还来你家买!"</p>
+			</div>
+		<?php }?>
 	</div>
 	
 	<div class="product_list">
 		<h1>新品速递</h1>
+		<?php foreach ($products as $product) {?>
 		<div class="tcard">
-			<a href="#"><img src="/images/listsmall1.jpg" alt=""></a>
-			<h2>三只松鼠-腰果</h2>
+			<a href="/index.php/product/index/<?php echo $product->id ?>"><img src="<?php echo $product->img ?>" alt=""></a>
+			<h2><?php echo $product->name ?></h2>
 			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
 			<p>"人好物也好，以后还来你家买!"</p>
 		</div>
-		<div class="tcard">
-			<a href="#"><img src="/images/3.jpg" alt=""></a>
-			<h2>蛋糕</h2>
-			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
-			<p>"人好物也好，以后还来你家买!"</p>
-		</div>
-		<div class="tcard">
-			<a href="#"><img src="/images/303082209045706516.jpg" alt=""></a>
-			<h2>三只松鼠-松果</h2>
-			<h3><a href="#" class="span">新品</a>   月销2320笔</h3>
-			<p>"人好物也好，以后还来你家买!"</p>
-		</div>
+		<?php }?>
 	</div>
 	<div class="bottom">
 		<ul>

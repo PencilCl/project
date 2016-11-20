@@ -23,10 +23,18 @@
 <div class="row navbar-default navbar-fixed-top" role="navigation"">
       <div class="col-sm-12 col-md-6 col-md-offset-3">
         <div class="header_nav  ">
-            <li><a href=" " class="login">亲，请登录，免费注册 </a></li>
+            <li>
+            <?php if (isset($_SESSION['user'])) {
+              $user = $_SESSION['user'];?>
+                <img src="<?php echo $user->avatar ?>" class="img-circle" width=32 height=32 alt="avatar">
+                <?php echo $user->name ?>
+                <a href="/index.php/home/logout">[退出]</a>
+            <?php } else { ?>
+                <a href="/index.php/home/login" class="login">亲，请登录，免费注册 </a>
+            <?php } ?></li>
             <div class="space"></div>
-            <li><a href="#">商城首页</a></li>
-            <li><i class="fa fa-shopping-cart"></i><a href="#"> 购物车</a></li>
+            <li><a href="/">商城首页</a></li>
+            <li><i class="fa fa-shopping-cart"></i><a href="/index.php/shopping"> 购物车</a></li>
             <li><i class="fa fa-heart"></i><a href="#">  收藏夹</a></li>
             <li><i class=" fa fa-user"></i><a href="#"> 个人中心</a></li>
         </div>
